@@ -1,12 +1,11 @@
 public class Order {
-    double lengthTrip;
     int boardingPrice = 60;
     int kmPrice = 20;
     int discountOnOrder = 1_000;
     double discountPercent = .05;
     int maxDiscount = 100;
 
-    double tripPrice(){
+    double calculateTripPrice(double lengthTrip){
         double result = lengthTrip * kmPrice + boardingPrice;
         double discount = 0.;
         if (result > discountOnOrder){
