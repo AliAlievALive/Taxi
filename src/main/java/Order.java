@@ -7,7 +7,7 @@ public class Order {
 
     double calculateTripPrice(double lengthTrip){
         double result = lengthTrip * kmPrice + boardingPrice;
-        double discount = 0.;
+        double discount = 0;
         if (result > discountOnOrder){
             discount = result * discountPercent;
             if (discount > maxDiscount) {
