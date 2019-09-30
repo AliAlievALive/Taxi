@@ -1,3 +1,5 @@
+package ru.itpark;
+
 public class Order {
     int boardingPrice = 60;
     int kmPrice = 20;

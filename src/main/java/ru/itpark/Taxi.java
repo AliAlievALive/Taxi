@@ -1,3 +1,5 @@
+package ru.itpark;
+
 public class Taxi {
     public static void main(String[] args) {
         Order toHome = new Order();
