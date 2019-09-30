@@ -1,5 +1,5 @@
 language: java
-jdk: oraclejdk9.0.1
+jdk: oraclejdk1.9
 
 script: mvn -e verify
 
