@@ -1,4 +1,4 @@
-package ru.itpark;
+package ru.itpark.service;
 
 public class Taxi {
     public static void main(String[] args) {

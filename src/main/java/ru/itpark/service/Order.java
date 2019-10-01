@@ -1,4 +1,4 @@
-package ru.itpark;
+package ru.itpark.service;
 
 public class Order {
     int boardingPrice = 60;
