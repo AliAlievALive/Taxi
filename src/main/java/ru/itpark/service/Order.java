@@ -1,59 +1,47 @@
 package ru.itpark.service;
 
 public class Order {
-    private int boardingPrice = 60;
-    private int kmPrice = 20;
-    private int discountOnOrder = 1_000;
-    private double discountPercent = .05;
-    private int maxDiscount = 100;
+    private int boardingPrice;
+    private int kmPrice;
+    private int discountOnOrder;
+    private double discountPercent;
+    private int maxDiscount;
+
+    public Order() {
+        this.boardingPrice = 60;
+        this.kmPrice = 20;
+        this.discountOnOrder = 1_000;
+        this.discountPercent = .05;
+        this.maxDiscount = 100;
+    }
 
     public int getBoardingPrice() {
         return boardingPrice;
-    }
-
-    public void setBoardingPrice(int boardingPrice) {
-        this.boardingPrice = boardingPrice;
     }
 
     public int getKmPrice() {
         return kmPrice;
     }
 
-    public void setKmPrice(int kmPrice) {
-        this.kmPrice = kmPrice;
-    }
-
     public int getDiscountOnOrder() {
         return discountOnOrder;
-    }
-
-    public void setDiscountOnOrder(int discountOnOrder) {
-        this.discountOnOrder = discountOnOrder;
     }
 
     public double getDiscountPercent() {
         return discountPercent;
     }
 
-    public void setDiscountPercent(double discountPercent) {
-        this.discountPercent = discountPercent;
-    }
-
     public int getMaxDiscount() {
         return maxDiscount;
     }
 
-    public void setMaxDiscount(int maxDiscount) {
-        this.maxDiscount = maxDiscount;
-    }
-
     double calculateTripPrice(double lengthTrip){
-        double result = lengthTrip * kmPrice + boardingPrice;
+        double result = lengthTrip * getKmPrice() + getBoardingPrice();
         double discount = 0;
-        if (result > discountOnOrder){
-            discount = result * discountPercent;
-            if (discount > maxDiscount) {
-                discount = maxDiscount;
+        if (result > getDiscountOnOrder()){
+            discount = result * getDiscountPercent();
+            if (discount > getMaxDiscount()) {
+                discount = getMaxDiscount();
             }
         }
         return result - discount;
