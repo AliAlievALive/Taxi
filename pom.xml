@@ -8,9 +8,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <!--
-    Double Shift -> Run Anything -> mvn test (но лучше сразу привыкнуть к verify)
-   -->
+
     <build>
         <plugins>
             <plugin>
